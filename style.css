@@ -372,9 +372,9 @@ text-shadow: 0 0 10px rgba(5, 171, 101, 0.8), 0 0 20px rgba(5, 171, 101, 0.8), 0
   flex-wrap: wrap;
   width: 100%;
 }
+
 .cat-main {
   width: 250px;
-  /* text-align: center; */
   height: 300px;
   margin: 3px 8px;
   font-weight: bold;
@@ -931,6 +931,21 @@ svg {
     animation: text-In-right 1s ease-out;
     animation-fill-mode: forwards;
   }
+
+  .prod {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prod-left,
+  .prod-right {
+    width: 90%;
+    margin: 10px 0; 
+  }
+
+
+
+
 }
 
 @media (max-width: 480px) {
