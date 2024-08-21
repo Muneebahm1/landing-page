@@ -674,11 +674,38 @@ opacity: 1;}
   .cat-sub{
     text-align: center;
   }
-  .prod-left, .c-left,
-  .prod-right, .c-right,.discover,
-  .left p {
+  @keyframes text-In-left {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
       transform: translateX(0);
       opacity: 1;
+    }
+  }
+  @keyframes text-In-right {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  
+  .prod-left, .c-left,.discover,
+  .left p {
+    animation: text-In-left  1s ease-out;
+
+  }
+
+ 
+  .prod-right, .c-right{
+    animation: text-In-right  1s ease-out;
+
   }
 
     .prod{
