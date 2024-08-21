@@ -253,77 +253,8 @@ ul.auth li:hover {
   }
 }
 
-.text-h1,
-.discover {
-  font-family: monospace;
-  font-size: 2em;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  width: 28ch;
-  animation: typing 7s steps(28), blink 0.7s step-end infinite alternate;
-}
-
-.highlight {
-  color: #05ab65;
-}
 
 
-
-.discover {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-right:5px ;
-}
-
-.reveal-text {
-  width: 0;
-  animation: reveal 7s infinite;
- 
-  color: #05ab65;
-}
-
-.reveal-text span {
-  margin-left: -355px;
-  animation: slidein 7s infinite;
-}
-
-@keyframes slidein {
-  0% {
-    margin-left: -800px;
-  }
-  20% {
-    margin-left: -800px;
-  }
-  35% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-
-@keyframes reveal {
-  0% {
-    opacity: 0;
-    width: 0;
-  }
-  20% {
-    opacity: 1;
-    width: 0;
-  }
-  30% {
-    width: 355px;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    width: 355px;
-  }
-}
 .new-arrival {
 font-size: 3rem;
 color: #05AB65; /* Green color */
@@ -697,15 +628,6 @@ svg {
   overflow: hidden;
   position: relative;
 }
-.discover {
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-}
-.top-product:hover .discover {
-  transform: translateX(0);
-  opacity: 1;
-}
 
 .prod-left,
 .c-left {
@@ -1007,7 +929,6 @@ svg {
 
   .prod-left,
   .c-left,
-  .discover,
   .left p {
     animation: text-In-left 1s ease-out;
     animation-fill-mode: forwards;
@@ -1029,7 +950,28 @@ svg {
     margin: 10px 0; 
   }
 
+  .text-h1,
+  .discover {
+    font-size: 1.5em; 
+    width: 20ch;
+  }
 
+  .reveal-text {
+    width: 100%; 
+    animation: reveal 7s infinite;
+  }
+
+  .reveal-text span {
+    margin-left: 0;
+  }
+
+  .discover {
+    margin-right: 0; 
+  }
+
+  .top-product {
+    padding: 20px; 
+  }
 
 
 }
@@ -1116,7 +1058,7 @@ svg {
   svg {
     width: 25px;
   }
-  .reveal-text span {
+  /* .reveal-text span {
     margin-left: -80%;
   }
 
@@ -1154,5 +1096,29 @@ svg {
       opacity: 0;
       width: 80%;
     }
+  } */
+
+
+  .text-h1,
+  .discover {
+    font-size: 1.2em; 
+    width: 8ch; 
+  }
+
+  .reveal-text {
+    width: 90%; 
+    animation: reveal 7s infinite;
+  }
+
+  .reveal-text span {
+    margin-left: 0;
+  }
+
+  .discover {
+    margin-right: 0;
+  }
+
+  .top-product {
+    padding: 15px; 
   }
 }

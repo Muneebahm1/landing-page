@@ -8,7 +8,83 @@
     <title>Landing page</title>
     <style>
 
+.discover {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+.top-product:hover .discover {
+  transform: translateX(0);
+  opacity: 1;
+}
+.text-h1,
+.discover {
+  font-family: monospace;
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  width: 28ch;
+  animation: typing 7s steps(28), blink 0.7s step-end infinite alternate;
+}
 
+.highlight {
+  color: #05ab65;
+}
+
+.discover {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right:5px ;
+}
+.reveal-text {
+  width: 0;
+  animation: reveal 7s infinite;
+ 
+  color: #05ab65;
+}
+
+.reveal-text span {
+  margin-left: -355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  20% {
+    margin-left: -800px;
+  }
+  35% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 1;
+    width: 0;
+  }
+  30% {
+    width: 355px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 355px;
+  }
+}
 
     </style>
   </head>
@@ -154,7 +230,7 @@
         <div class="trans" style="padding-left: 30px; padding-top: 30px">
           <h4 class="animated-heading">Most Popular</h4>
 
-          <h1 class="discover">Discover Latest Additions</h1>
+          <h1 class="discover">Latest Additions At</h1>
           <h1 class="discover reveal-text">
             <span>Your Top Choice Shop</span>
           </h1>
