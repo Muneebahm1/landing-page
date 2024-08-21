@@ -41,8 +41,8 @@ ul.auth li {
 
 ul.items li:hover,
 ul.auth li:hover {
-  color: #c0dfe7;
-  background-color: #014122;
+  color: #014122;
+  /* background-color: #014122; */
   border-radius: 5%;
 }
 
@@ -69,7 +69,7 @@ ul.auth li:hover {
 .nav-link:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
-  background-color: #c0dfe7;
+  background-color: #014122;
 }
 
 @keyframes grow {
@@ -87,7 +87,7 @@ ul.auth li:hover {
 }
 
 .nav-link:hover {
-  color: #c0dfe7;
+  color: #014122;
   animation: grow 0.5s ease-in-out;
 }
 
