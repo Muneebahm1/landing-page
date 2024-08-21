@@ -504,7 +504,9 @@ cursor: pointer;
   transform: scale(1.03);
 }
 
-
+.c-main{
+  padding: 30px 20px;
+}
 
 .prod-div,.comments{
 overflow: hidden;
@@ -529,11 +531,11 @@ transform: translateX(100%);
 opacity: 0;
 transition: transform 0.9s ease-in-out, opacity 1s ease-in-out;
 }
-.prod-div:hover  .prod-left,.comments:hover .c-left{
+.prod-div:hover  .prod-left,.c-main:hover .c-left{
 transform: translateX(0);
 opacity: 1;}
 
-.prod-div:hover  .prod-right,.comments:hover .c-right{
+.prod-div:hover  .prod-right,.c-main:hover .c-right{
 transform: translateX(0);
 opacity: 1;}
 
