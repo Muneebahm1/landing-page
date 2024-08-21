@@ -4,9 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
     <title>Landing page</title>
+    <style>
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
 
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      .text-h1,
+      .discover {
+        font-family: monospace;
+        font-size: 2em;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        width: 28ch;
+        animation: typing 7s steps(28), blink 0.7s step-end infinite alternate;
+      }
+
+      .highlight {
+        color: #05ab65;
+      }
+
+   
+
+      .discover {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right:5px ;
+      }
+
+      .reveal-text {
+        width: 0;
+        animation: reveal 7s infinite;
+       
+        color: #05ab65;
+      }
+
+      .reveal-text span {
+        margin-left: -355px;
+        animation: slidein 7s infinite;
+      }
+
+      @keyframes slidein {
+        0% {
+          margin-left: -800px;
+        }
+        20% {
+          margin-left: -800px;
+        }
+        35% {
+          margin-left: 0;
+        }
+        100% {
+          margin-left: 0;
+        }
+      }
+
+      @keyframes reveal {
+        0% {
+          opacity: 0;
+          width: 0;
+        }
+        20% {
+          opacity: 1;
+          width: 0;
+        }
+        30% {
+          width: 355px;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          width: 355px;
+        }
+      }
+      .new-arrival {
+  font-size: 3rem;
+  color: #05AB65; /* Green color */
+  text-transform: uppercase;
+  font-weight: bold;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+
+    </style>
   </head>
   <body>
     <nav class="navbar">
@@ -124,7 +229,9 @@
     <main>
       <div class="hero">
         <div class="left">
-          <h1>Transform your habit naturaly</h1>
+          <h1 class="text-h1">
+            Transform your <span class="highlight">habit naturally</span>
+          </h1>
           <p>
             Fuel your day with a nourishing breakfast. Enjoy whole grains,
             protein-rich foods, and fresh fruits and vegetables for sustained
@@ -136,15 +243,23 @@
           <img src="./images/design.png" alt="" />
         </div>
       </div>
-      <div class="top-product" style="
+      <div
+        class="top-product"
+        style="
           background-color: #f1f4f1;
           padding-top: 10px;
           margin: 80px 10px;
-          padding-bottom: 10px;"
+          padding-bottom: 10px;
+        "
       >
         <div class="trans" style="padding-left: 30px; padding-top: 30px">
           <h4>Most Popular</h4>
-          <h1 class="discover">Discover the Latest Additions at Your Top Choice Shop</h1>
+          <!-- <h1 class="discover">Discover the Latest Additions at Your Top Choice Shop</h1> -->
+
+          <h1 class="discover">Discover Latest Additions</h1>
+          <h1 class="discover reveal-text">
+            <span>Your Top Choice Shop</span>
+          </h1>
         </div>
         <div class="catagories">
           <div class="cat-main">
@@ -207,13 +322,13 @@
         </div>
 
         <div>
-          <h1 style="text-align: center">New Arrival</h1>
+          <h1 class="new-arrival" style="text-align: center">New Arrival</h1>
         </div>
 
         <div class="catagories">
           <div class="Product-img2">
             <img src="./images/shampoo.png" alt="Perfume" />
-            
+
             <div class="cat-sub">
               <span>Perfume</span>
               <h4 style="margin-top: 7px">$189.00</h4>
@@ -361,10 +476,8 @@
 
     <footer>
       <div class="common-div">
-       
+        <h1 style="text-align: center">Payment Methods</h1>
 
-          <h1 style="text-align: center;">Payment Methods</h1>
-        
         <div class="cards-img">
           <img src="./images/cards.png" alt="" />
         </div>
