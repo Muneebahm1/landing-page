@@ -236,6 +236,135 @@ ul.auth li:hover {
 }
 
 
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.text-h1,
+.discover {
+  font-family: monospace;
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  width: 28ch;
+  animation: typing 7s steps(28), blink 0.7s step-end infinite alternate;
+}
+
+.highlight {
+  color: #05ab65;
+}
+
+
+
+.discover {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right:5px ;
+}
+
+.reveal-text {
+  width: 0;
+  animation: reveal 7s infinite;
+ 
+  color: #05ab65;
+}
+
+.reveal-text span {
+  margin-left: -355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  20% {
+    margin-left: -800px;
+  }
+  35% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 1;
+    width: 0;
+  }
+  30% {
+    width: 355px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 355px;
+  }
+}
+.new-arrival {
+font-size: 3rem;
+color: #05AB65; /* Green color */
+text-transform: uppercase;
+font-weight: bold;
+animation: blink 2s infinite;
+}
+
+@keyframes blink {
+0%, 100% {
+opacity: 1;
+}
+50% {
+opacity: 0.3;
+}
+}
+
+.animated-heading {
+font-size: 24px;
+font-weight: bold;
+color: #333;
+text-align: center;
+animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+0% {
+opacity: 0.8;
+text-shadow: 0 0 5px rgba(5, 171, 101, 0.5), 0 0 10px rgba(5, 171, 101, 0.5), 0 0 15px rgba(5, 171, 101, 0.5), 0 0 20px rgba(5, 171, 101, 0.5);
+}
+100% {
+opacity: 1;
+text-shadow: 0 0 10px rgba(5, 171, 101, 0.8), 0 0 20px rgba(5, 171, 101, 0.8), 0 0 30px rgba(5, 171, 101, 0.8), 0 0 40px rgba(5, 171, 101, 0.8);
+}
+}
+
+
+
+
+
+
 .catagories {
   display: flex;
   justify-content: center;
